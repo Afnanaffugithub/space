@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            /* perspective: 500px; */
+            /* background-color: rgb(1, 23, 37); */
+            background-image: url("galexy.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        #milky {
+            height: 100vh;
+            width: 100%;
+            background: transparent;
+
+            /* border: 2px solid white; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            /* transform-style: preserve-3d; */
+        }
+
+        #milky>div {
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+
+        #sun {
+            height: 50px;
+            width: 50px;
+            background-image: url(sun.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: absolute;
+            border-radius: 50%;
+            box-shadow: 0 0 100px orange, 0 0 100px 10px rgba(255, 174, 0, 0.863);
+            /* animation: font 0.3s infinite alternate; */
+        }
+
+        @keyframes font {
+            100% {
+                box-shadow: 0px 0px 1000px orange;
+            }
+
+        }
+
+        #galexy8 {
+            width: 530px;
+            height: 530px;
+            /* border: 0.2px solid white; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            position: absolute;
+            animation-name: rotat;
+            animation-duration: 250s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        #neptune {
+            height: 18px;
+            width: 18px;
+            background-image: url("neptune.jpg");
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            top: 265px;
+            border-radius: 50%;
+        }
+
+        #galexy7 {
+            width: 480px;
+            height: 480px;
+            /* border: 0.2px solid white; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            position: absolute;
+            animation-name: rotat;
+            animation-duration: 200s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        #uranus {
+            height: 18px;
+            width: 18px;
+            background-image: url("uranus.jpg");
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            bottom: 240px;
+            border-radius: 50%;
+        }
+
+        #galexy6 {
+            width: 410px;
+            height: 410px;
+            /* border: 0.2px solid white; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            position: absolute;
+            animation-name: rotat;
+            animation-duration: 160s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        #satrun {
+            height: 90px;
+            width: 90px;
+            background-image: url("satrun.png");
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            top: 206px;
+            border-radius: 50%;
+            animation: orbit 3s alternate;
+        }
+
+        #galexy5 {
+            width: 320px;
+            height: 320px;
+            /* border: 0.2px solid white; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            position: absolute;
+            animation-name: rotat;
+            animation-duration: 120s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        #jupter {
+            height: 45px;
+            width: 45px;
+            background-image: url("jupiter.jpg");
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            top: -160px;
+            border-radius: 50%;
+        }
+
+        #galexy4 {
+            width: 240px;
+            height: 240px;
+            /* border: 0.2px solid white; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            position: absolute;
+            animation-name: rotat;
+            animation-duration: 70s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        #mars {
+            height: 20px;
+            width: 20px;
+            background-image: url("mars.jpg");
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            top: -120px;
+            border-radius: 50%;
+        }
+
+        #galexy3 {
+            width: 170px;
+            height: 170px;
+            /* border: 0.2px solid white; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            position: absolute;
+            animation-name: rotat;
+            animation-duration: 60s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        #earth {
+            height: 20px;
+            width: 20px;
+            background-color: transparent;
+            background-image: url("earth.avif");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            top: -1px;
+            right: 104px;
+            border-radius: 50%;
+        }
+
+        #galexy2 {
+            height: 110px;
+            width: 110px;
+            /* border: 0.2px solid white; */
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            animation-name: rotat;
+            animation-duration: 15s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        #venus {
+            height: 20px;
+            width: 20px;
+            background-image: url("venus.jpg");
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 50%;
+            position: relative;
+            top: -55px;
+        }
+
+        #galexy1 {
+            height: 70px;
+            width: 70px;
+            /* border: 0.2px solid white; */
+            border-radius: 50%;
+            position: absolute;
+            animation-name: rotat;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        #mer {
+            height: 10px;
+            width: 10px;
+            background-image: url("mer.jpg");
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            top: 50px;
+            border-radius: 50%;
+            animation: orbit 3s;
+        }
+
+        @keyframes rotat {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* @keyframes orbit{
+            0%{
+                transform: rotate(0deg)translate(70px)rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg)translate(70px)rotate(-360);
+            }
+        } */
+
+        #moon {
+            height: 35px;
+            width: 35px;
+            /* border: 0.2px solid white; */
+            border-radius: 50%;
+            position: relative;
+            display: flex;
+            left: -75px;
+            justify-content: center;
+            align-items: center;
+            animation-name: rotat;
+            animation-duration: 4s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        #mon {
+            height: 6px;
+            width: 6px;
+            background-image: url("moon.jpg");
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: absolute;
+            left: -4px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="milky">
+        <div id="galexy8">
+            <div id="neptune"></div>
+        </div>
+        <div id="galexy7">
+            <div id="uranus"></div>
+        </div>
+        <div id="galexy6">
+            <div id="satrun"></div>
+        </div>
+        <div id="galexy5">
+            <div id="jupter"></div>
+        </div>
+        <div id="galexy4">
+            <div id="mars"></div>
+
+        </div>
+        <div id="galexy3">
+            <div id="moon">
+                <div id="mon"></div>
+            </div>
+            <div id="earth"></div>
+        </div>
+
+
+
+        <div id="galexy2">
+            <div id="venus"></div>
+        </div>
+        <div id="galexy1">
+            <div id="mer"></div>
+        </div>
+        <div id="sun"></div>
+    </div>
+</body>
+
+</html>
